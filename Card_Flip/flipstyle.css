@@ -1,0 +1,44 @@
+#container
+{
+  position: relative;
+  left: 200px;
+  height: 120px;
+  width: 100px;
+  position: relative;
+  perspective: 1000px;
+  -webkit-perspective: 500px;
+}
+
+#card
+{
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s linear;
+}
+
+#container:hover #card
+{
+  transform: rotateY(180deg);
+}
+
+.face
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.back
+{
+  transform: rotateY(180deg);
+  background-color: blue;
+  
+}
+
+.front
+{
+  background-color: red;
+}
